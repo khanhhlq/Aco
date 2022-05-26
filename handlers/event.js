@@ -1,4 +1,4 @@
-const { readdirSync} = require('fs')
+const { readdirSync } = require('fs')
 
 module.exports = (client) => {
     let count = 0
