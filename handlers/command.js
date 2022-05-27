@@ -9,12 +9,10 @@ module.exports = (client) => {
             if (pull.name) {
                 count++
                 client.commands.set(pull.name, pull)
-            } else{
-                continue
-            }
+            } else continue
             if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => client.aliases.set(alias, pull.name))
         }
     })
-
+    
     console.log(`${count} lệnh đã sẵn sàng ✅`)
 }
